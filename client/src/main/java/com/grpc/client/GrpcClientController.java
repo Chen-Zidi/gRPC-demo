@@ -15,4 +15,9 @@ public class GrpcClientController {
     public String printMessage(@RequestParam(defaultValue = "Michael") String name) {
         return grpcClientService.sendMessage(name);
     }
+
+    @RequestMapping("/list")
+    public String listEmployees() {
+        return grpcClientService.listEmployees();
+    }
 }

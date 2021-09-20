@@ -4,7 +4,25 @@ option java_package = "com.grpc.common";
 
 service Hello {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc listEmployees(Empty) returns (EmployeeList){}
 }
+
+// The empty request message
+message Empty{}
+
+
+// The response message contains a list of Employee
+message EmployeeList{
+  repeated Employee employees = 1;
+}
+
+message Employee{
+  int64 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  double salary = 5;
+}
+
 // The request message containing the user name.
 message HelloRequest {
   string name = 1;

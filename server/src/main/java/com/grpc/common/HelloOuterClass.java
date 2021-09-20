@@ -14,6 +14,2033 @@ public final class HelloOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface EmptyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Empty)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * The empty request message
+   * </pre>
+   *
+   * Protobuf type {@code Empty}
+   */
+  public  static final class Empty extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Empty)
+      EmptyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Empty.newBuilder() to construct.
+    private Empty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Empty() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Empty(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.grpc.common.HelloOuterClass.internal_static_Empty_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.grpc.common.HelloOuterClass.internal_static_Empty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.grpc.common.HelloOuterClass.Empty.class, com.grpc.common.HelloOuterClass.Empty.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.grpc.common.HelloOuterClass.Empty)) {
+        return super.equals(obj);
+      }
+      com.grpc.common.HelloOuterClass.Empty other = (com.grpc.common.HelloOuterClass.Empty) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.grpc.common.HelloOuterClass.Empty prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The empty request message
+     * </pre>
+     *
+     * Protobuf type {@code Empty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Empty)
+        com.grpc.common.HelloOuterClass.EmptyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.grpc.common.HelloOuterClass.internal_static_Empty_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.grpc.common.HelloOuterClass.internal_static_Empty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.grpc.common.HelloOuterClass.Empty.class, com.grpc.common.HelloOuterClass.Empty.Builder.class);
+      }
+
+      // Construct using com.grpc.common.HelloOuterClass.Empty.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.grpc.common.HelloOuterClass.internal_static_Empty_descriptor;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Empty getDefaultInstanceForType() {
+        return com.grpc.common.HelloOuterClass.Empty.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Empty build() {
+        com.grpc.common.HelloOuterClass.Empty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Empty buildPartial() {
+        com.grpc.common.HelloOuterClass.Empty result = new com.grpc.common.HelloOuterClass.Empty(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.grpc.common.HelloOuterClass.Empty) {
+          return mergeFrom((com.grpc.common.HelloOuterClass.Empty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.grpc.common.HelloOuterClass.Empty other) {
+        if (other == com.grpc.common.HelloOuterClass.Empty.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.grpc.common.HelloOuterClass.Empty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.grpc.common.HelloOuterClass.Empty) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Empty)
+    }
+
+    // @@protoc_insertion_point(class_scope:Empty)
+    private static final com.grpc.common.HelloOuterClass.Empty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.grpc.common.HelloOuterClass.Empty();
+    }
+
+    public static com.grpc.common.HelloOuterClass.Empty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Empty>
+        PARSER = new com.google.protobuf.AbstractParser<Empty>() {
+      @java.lang.Override
+      public Empty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Empty(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Empty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Empty> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.grpc.common.HelloOuterClass.Empty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EmployeeListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EmployeeList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    java.util.List<com.grpc.common.HelloOuterClass.Employee> 
+        getEmployeesList();
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    com.grpc.common.HelloOuterClass.Employee getEmployees(int index);
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    int getEmployeesCount();
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    java.util.List<? extends com.grpc.common.HelloOuterClass.EmployeeOrBuilder> 
+        getEmployeesOrBuilderList();
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    com.grpc.common.HelloOuterClass.EmployeeOrBuilder getEmployeesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * The response message contains a list of Employee
+   * </pre>
+   *
+   * Protobuf type {@code EmployeeList}
+   */
+  public  static final class EmployeeList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:EmployeeList)
+      EmployeeListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmployeeList.newBuilder() to construct.
+    private EmployeeList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmployeeList() {
+      employees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EmployeeList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                employees_ = new java.util.ArrayList<com.grpc.common.HelloOuterClass.Employee>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              employees_.add(
+                  input.readMessage(com.grpc.common.HelloOuterClass.Employee.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          employees_ = java.util.Collections.unmodifiableList(employees_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.grpc.common.HelloOuterClass.internal_static_EmployeeList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.grpc.common.HelloOuterClass.internal_static_EmployeeList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.grpc.common.HelloOuterClass.EmployeeList.class, com.grpc.common.HelloOuterClass.EmployeeList.Builder.class);
+    }
+
+    public static final int EMPLOYEES_FIELD_NUMBER = 1;
+    private java.util.List<com.grpc.common.HelloOuterClass.Employee> employees_;
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    public java.util.List<com.grpc.common.HelloOuterClass.Employee> getEmployeesList() {
+      return employees_;
+    }
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    public java.util.List<? extends com.grpc.common.HelloOuterClass.EmployeeOrBuilder> 
+        getEmployeesOrBuilderList() {
+      return employees_;
+    }
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    public int getEmployeesCount() {
+      return employees_.size();
+    }
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    public com.grpc.common.HelloOuterClass.Employee getEmployees(int index) {
+      return employees_.get(index);
+    }
+    /**
+     * <code>repeated .Employee employees = 1;</code>
+     */
+    public com.grpc.common.HelloOuterClass.EmployeeOrBuilder getEmployeesOrBuilder(
+        int index) {
+      return employees_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < employees_.size(); i++) {
+        output.writeMessage(1, employees_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < employees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, employees_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.grpc.common.HelloOuterClass.EmployeeList)) {
+        return super.equals(obj);
+      }
+      com.grpc.common.HelloOuterClass.EmployeeList other = (com.grpc.common.HelloOuterClass.EmployeeList) obj;
+
+      boolean result = true;
+      result = result && getEmployeesList()
+          .equals(other.getEmployeesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEmployeesCount() > 0) {
+        hash = (37 * hash) + EMPLOYEES_FIELD_NUMBER;
+        hash = (53 * hash) + getEmployeesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.EmployeeList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.grpc.common.HelloOuterClass.EmployeeList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The response message contains a list of Employee
+     * </pre>
+     *
+     * Protobuf type {@code EmployeeList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:EmployeeList)
+        com.grpc.common.HelloOuterClass.EmployeeListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.grpc.common.HelloOuterClass.internal_static_EmployeeList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.grpc.common.HelloOuterClass.internal_static_EmployeeList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.grpc.common.HelloOuterClass.EmployeeList.class, com.grpc.common.HelloOuterClass.EmployeeList.Builder.class);
+      }
+
+      // Construct using com.grpc.common.HelloOuterClass.EmployeeList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEmployeesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (employeesBuilder_ == null) {
+          employees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          employeesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.grpc.common.HelloOuterClass.internal_static_EmployeeList_descriptor;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.EmployeeList getDefaultInstanceForType() {
+        return com.grpc.common.HelloOuterClass.EmployeeList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.EmployeeList build() {
+        com.grpc.common.HelloOuterClass.EmployeeList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.EmployeeList buildPartial() {
+        com.grpc.common.HelloOuterClass.EmployeeList result = new com.grpc.common.HelloOuterClass.EmployeeList(this);
+        int from_bitField0_ = bitField0_;
+        if (employeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            employees_ = java.util.Collections.unmodifiableList(employees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.employees_ = employees_;
+        } else {
+          result.employees_ = employeesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.grpc.common.HelloOuterClass.EmployeeList) {
+          return mergeFrom((com.grpc.common.HelloOuterClass.EmployeeList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.grpc.common.HelloOuterClass.EmployeeList other) {
+        if (other == com.grpc.common.HelloOuterClass.EmployeeList.getDefaultInstance()) return this;
+        if (employeesBuilder_ == null) {
+          if (!other.employees_.isEmpty()) {
+            if (employees_.isEmpty()) {
+              employees_ = other.employees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEmployeesIsMutable();
+              employees_.addAll(other.employees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.employees_.isEmpty()) {
+            if (employeesBuilder_.isEmpty()) {
+              employeesBuilder_.dispose();
+              employeesBuilder_ = null;
+              employees_ = other.employees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              employeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEmployeesFieldBuilder() : null;
+            } else {
+              employeesBuilder_.addAllMessages(other.employees_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.grpc.common.HelloOuterClass.EmployeeList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.grpc.common.HelloOuterClass.EmployeeList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.grpc.common.HelloOuterClass.Employee> employees_ =
+        java.util.Collections.emptyList();
+      private void ensureEmployeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          employees_ = new java.util.ArrayList<com.grpc.common.HelloOuterClass.Employee>(employees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.grpc.common.HelloOuterClass.Employee, com.grpc.common.HelloOuterClass.Employee.Builder, com.grpc.common.HelloOuterClass.EmployeeOrBuilder> employeesBuilder_;
+
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public java.util.List<com.grpc.common.HelloOuterClass.Employee> getEmployeesList() {
+        if (employeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(employees_);
+        } else {
+          return employeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public int getEmployeesCount() {
+        if (employeesBuilder_ == null) {
+          return employees_.size();
+        } else {
+          return employeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public com.grpc.common.HelloOuterClass.Employee getEmployees(int index) {
+        if (employeesBuilder_ == null) {
+          return employees_.get(index);
+        } else {
+          return employeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder setEmployees(
+          int index, com.grpc.common.HelloOuterClass.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.set(index, value);
+          onChanged();
+        } else {
+          employeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder setEmployees(
+          int index, com.grpc.common.HelloOuterClass.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder addEmployees(com.grpc.common.HelloOuterClass.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.add(value);
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder addEmployees(
+          int index, com.grpc.common.HelloOuterClass.Employee value) {
+        if (employeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmployeesIsMutable();
+          employees_.add(index, value);
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder addEmployees(
+          com.grpc.common.HelloOuterClass.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder addEmployees(
+          int index, com.grpc.common.HelloOuterClass.Employee.Builder builderForValue) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          employeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder addAllEmployees(
+          java.lang.Iterable<? extends com.grpc.common.HelloOuterClass.Employee> values) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, employees_);
+          onChanged();
+        } else {
+          employeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder clearEmployees() {
+        if (employeesBuilder_ == null) {
+          employees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          employeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public Builder removeEmployees(int index) {
+        if (employeesBuilder_ == null) {
+          ensureEmployeesIsMutable();
+          employees_.remove(index);
+          onChanged();
+        } else {
+          employeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public com.grpc.common.HelloOuterClass.Employee.Builder getEmployeesBuilder(
+          int index) {
+        return getEmployeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public com.grpc.common.HelloOuterClass.EmployeeOrBuilder getEmployeesOrBuilder(
+          int index) {
+        if (employeesBuilder_ == null) {
+          return employees_.get(index);  } else {
+          return employeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public java.util.List<? extends com.grpc.common.HelloOuterClass.EmployeeOrBuilder> 
+           getEmployeesOrBuilderList() {
+        if (employeesBuilder_ != null) {
+          return employeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(employees_);
+        }
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public com.grpc.common.HelloOuterClass.Employee.Builder addEmployeesBuilder() {
+        return getEmployeesFieldBuilder().addBuilder(
+            com.grpc.common.HelloOuterClass.Employee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public com.grpc.common.HelloOuterClass.Employee.Builder addEmployeesBuilder(
+          int index) {
+        return getEmployeesFieldBuilder().addBuilder(
+            index, com.grpc.common.HelloOuterClass.Employee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Employee employees = 1;</code>
+       */
+      public java.util.List<com.grpc.common.HelloOuterClass.Employee.Builder> 
+           getEmployeesBuilderList() {
+        return getEmployeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.grpc.common.HelloOuterClass.Employee, com.grpc.common.HelloOuterClass.Employee.Builder, com.grpc.common.HelloOuterClass.EmployeeOrBuilder> 
+          getEmployeesFieldBuilder() {
+        if (employeesBuilder_ == null) {
+          employeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.grpc.common.HelloOuterClass.Employee, com.grpc.common.HelloOuterClass.Employee.Builder, com.grpc.common.HelloOuterClass.EmployeeOrBuilder>(
+                  employees_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          employees_ = null;
+        }
+        return employeesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:EmployeeList)
+    }
+
+    // @@protoc_insertion_point(class_scope:EmployeeList)
+    private static final com.grpc.common.HelloOuterClass.EmployeeList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.grpc.common.HelloOuterClass.EmployeeList();
+    }
+
+    public static com.grpc.common.HelloOuterClass.EmployeeList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmployeeList>
+        PARSER = new com.google.protobuf.AbstractParser<EmployeeList>() {
+      @java.lang.Override
+      public EmployeeList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EmployeeList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmployeeList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmployeeList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.grpc.common.HelloOuterClass.EmployeeList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EmployeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Employee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 id = 1;</code>
+     */
+    long getId();
+
+    /**
+     * <code>string firstName = 2;</code>
+     */
+    java.lang.String getFirstName();
+    /**
+     * <code>string firstName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getFirstNameBytes();
+
+    /**
+     * <code>string lastName = 3;</code>
+     */
+    java.lang.String getLastName();
+    /**
+     * <code>string lastName = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getLastNameBytes();
+
+    /**
+     * <code>double salary = 5;</code>
+     */
+    double getSalary();
+  }
+  /**
+   * Protobuf type {@code Employee}
+   */
+  public  static final class Employee extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Employee)
+      EmployeeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Employee.newBuilder() to construct.
+    private Employee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Employee() {
+      id_ = 0L;
+      firstName_ = "";
+      lastName_ = "";
+      salary_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Employee(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              firstName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lastName_ = s;
+              break;
+            }
+            case 41: {
+
+              salary_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.grpc.common.HelloOuterClass.internal_static_Employee_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.grpc.common.HelloOuterClass.internal_static_Employee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.grpc.common.HelloOuterClass.Employee.class, com.grpc.common.HelloOuterClass.Employee.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>int64 id = 1;</code>
+     */
+    public long getId() {
+      return id_;
+    }
+
+    public static final int FIRSTNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object firstName_;
+    /**
+     * <code>string firstName = 2;</code>
+     */
+    public java.lang.String getFirstName() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        firstName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string firstName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFirstNameBytes() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firstName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LASTNAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object lastName_;
+    /**
+     * <code>string lastName = 3;</code>
+     */
+    public java.lang.String getLastName() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string lastName = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLastNameBytes() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SALARY_FIELD_NUMBER = 5;
+    private double salary_;
+    /**
+     * <code>double salary = 5;</code>
+     */
+    public double getSalary() {
+      return salary_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      if (!getFirstNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, firstName_);
+      }
+      if (!getLastNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastName_);
+      }
+      if (salary_ != 0D) {
+        output.writeDouble(5, salary_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (!getFirstNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, firstName_);
+      }
+      if (!getLastNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastName_);
+      }
+      if (salary_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(5, salary_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.grpc.common.HelloOuterClass.Employee)) {
+        return super.equals(obj);
+      }
+      com.grpc.common.HelloOuterClass.Employee other = (com.grpc.common.HelloOuterClass.Employee) obj;
+
+      boolean result = true;
+      result = result && (getId()
+          == other.getId());
+      result = result && getFirstName()
+          .equals(other.getFirstName());
+      result = result && getLastName()
+          .equals(other.getLastName());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getSalary())
+          == java.lang.Double.doubleToLongBits(
+              other.getSalary()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFirstName().hashCode();
+      hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getLastName().hashCode();
+      hash = (37 * hash) + SALARY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getSalary()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.grpc.common.HelloOuterClass.Employee parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.grpc.common.HelloOuterClass.Employee prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Employee}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Employee)
+        com.grpc.common.HelloOuterClass.EmployeeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.grpc.common.HelloOuterClass.internal_static_Employee_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.grpc.common.HelloOuterClass.internal_static_Employee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.grpc.common.HelloOuterClass.Employee.class, com.grpc.common.HelloOuterClass.Employee.Builder.class);
+      }
+
+      // Construct using com.grpc.common.HelloOuterClass.Employee.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+
+        firstName_ = "";
+
+        lastName_ = "";
+
+        salary_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.grpc.common.HelloOuterClass.internal_static_Employee_descriptor;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Employee getDefaultInstanceForType() {
+        return com.grpc.common.HelloOuterClass.Employee.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Employee build() {
+        com.grpc.common.HelloOuterClass.Employee result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.grpc.common.HelloOuterClass.Employee buildPartial() {
+        com.grpc.common.HelloOuterClass.Employee result = new com.grpc.common.HelloOuterClass.Employee(this);
+        result.id_ = id_;
+        result.firstName_ = firstName_;
+        result.lastName_ = lastName_;
+        result.salary_ = salary_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.grpc.common.HelloOuterClass.Employee) {
+          return mergeFrom((com.grpc.common.HelloOuterClass.Employee)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.grpc.common.HelloOuterClass.Employee other) {
+        if (other == com.grpc.common.HelloOuterClass.Employee.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getFirstName().isEmpty()) {
+          firstName_ = other.firstName_;
+          onChanged();
+        }
+        if (!other.getLastName().isEmpty()) {
+          lastName_ = other.lastName_;
+          onChanged();
+        }
+        if (other.getSalary() != 0D) {
+          setSalary(other.getSalary());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.grpc.common.HelloOuterClass.Employee parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.grpc.common.HelloOuterClass.Employee) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object firstName_ = "";
+      /**
+       * <code>string firstName = 2;</code>
+       */
+      public java.lang.String getFirstName() {
+        java.lang.Object ref = firstName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          firstName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string firstName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFirstNameBytes() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          firstName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string firstName = 2;</code>
+       */
+      public Builder setFirstName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string firstName = 2;</code>
+       */
+      public Builder clearFirstName() {
+        
+        firstName_ = getDefaultInstance().getFirstName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string firstName = 2;</code>
+       */
+      public Builder setFirstNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lastName_ = "";
+      /**
+       * <code>string lastName = 3;</code>
+       */
+      public java.lang.String getLastName() {
+        java.lang.Object ref = lastName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string lastName = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLastNameBytes() {
+        java.lang.Object ref = lastName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string lastName = 3;</code>
+       */
+      public Builder setLastName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lastName = 3;</code>
+       */
+      public Builder clearLastName() {
+        
+        lastName_ = getDefaultInstance().getLastName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lastName = 3;</code>
+       */
+      public Builder setLastNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double salary_ ;
+      /**
+       * <code>double salary = 5;</code>
+       */
+      public double getSalary() {
+        return salary_;
+      }
+      /**
+       * <code>double salary = 5;</code>
+       */
+      public Builder setSalary(double value) {
+        
+        salary_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double salary = 5;</code>
+       */
+      public Builder clearSalary() {
+        
+        salary_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Employee)
+    }
+
+    // @@protoc_insertion_point(class_scope:Employee)
+    private static final com.grpc.common.HelloOuterClass.Employee DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.grpc.common.HelloOuterClass.Employee();
+    }
+
+    public static com.grpc.common.HelloOuterClass.Employee getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Employee>
+        PARSER = new com.google.protobuf.AbstractParser<Employee>() {
+      @java.lang.Override
+      public Employee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Employee(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Employee> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Employee> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.grpc.common.HelloOuterClass.Employee getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HelloRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:HelloRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -1131,6 +3158,21 @@ public final class HelloOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Empty_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Empty_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EmployeeList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EmployeeList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Employee_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Employee_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_HelloRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1149,10 +3191,15 @@ public final class HelloOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013hello.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 " +
-      "\001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t21\n\005He" +
-      "llo\022(\n\010SayHello\022\r.HelloRequest\032\013.HelloRe" +
-      "ply\"\000B\021\n\017com.grpc.commonb\006proto3"
+      "\n\013hello.proto\"\007\n\005Empty\",\n\014EmployeeList\022\034" +
+      "\n\temployees\030\001 \003(\0132\t.Employee\"K\n\010Employee" +
+      "\022\n\n\002id\030\001 \001(\003\022\021\n\tfirstName\030\002 \001(\t\022\020\n\010lastN" +
+      "ame\030\003 \001(\t\022\016\n\006salary\030\005 \001(\001\"\034\n\014HelloReques" +
+      "t\022\014\n\004name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message" +
+      "\030\001 \001(\t2[\n\005Hello\022(\n\010SayHello\022\r.HelloReque" +
+      "st\032\013.HelloReply\"\000\022(\n\rlistEmployees\022\006.Emp" +
+      "ty\032\r.EmployeeList\"\000B\021\n\017com.grpc.commonb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1166,14 +3213,32 @@ public final class HelloOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_HelloRequest_descriptor =
+    internal_static_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_Empty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Empty_descriptor,
+        new java.lang.String[] { });
+    internal_static_EmployeeList_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_EmployeeList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EmployeeList_descriptor,
+        new java.lang.String[] { "Employees", });
+    internal_static_Employee_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Employee_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Employee_descriptor,
+        new java.lang.String[] { "Id", "FirstName", "LastName", "Salary", });
+    internal_static_HelloRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_HelloReply_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_HelloReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloReply_descriptor,

@@ -26,4 +26,15 @@ public class GrpcClientService {
 
     }
 
+    public String listEmployees() {
+        HelloGrpc.HelloBlockingStub stub= HelloGrpc.newBlockingStub(serverChannel);
+        Instant inst1 = Instant.now();
+        HelloOuterClass.EmployeeList response = stub.listEmployees(HelloOuterClass.Empty.newBuilder().build());
+        Instant inst2 = Instant.now();
+        double diff = Duration.between(inst1, inst2).toMillis();
+        System.out.println("response time:" + diff);
+        return response.getEmployeesList().toString();
+
+    }
+
 }
