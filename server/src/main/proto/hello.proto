@@ -21,6 +21,14 @@ message Employee{
   string firstName = 2;
   string lastName = 3;
   double salary = 5;
+  message Address {
+    string houseNo = 1;
+    string street = 2;
+    string city = 4;
+    string state = 5;
+    string country = 6;
+  }
+  Address address = 6;
 }
 
 // The request message containing the user name.

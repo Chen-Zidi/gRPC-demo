@@ -16,6 +16,7 @@ the response time in `Duration.between(sendTime, receiveTime).toMillis()`
 
 The first time of execution seems extremely long, which I think can be ignored.
 
+In addition, it might be good to clear the cache each time of execution.
 
 ## Data in .proto
 
@@ -25,17 +26,19 @@ HelloReply: server gives "Hello World"
 
 Empty: empty request
 
-Employee: id, firstname, lastname, salary
+Employee: id, firstname, lastname, salary, Address
+
+Address: country, state, houseNo(string), street, city
 
 EmployeeList: a list of employees, by default the server gives four employees in the list.
 
-1,"Jack","Tim",300
+1,"Jack","Tim",300, Sweden, Stockholm, Stockholm, nameless, 1
 
-2,"Bob","Seif",1000
+2,"Bob","Seif",1000, Sweden, Stockholm, Stockholm, nameless, 2
 
-3,"Mina","Trump",500
+3,"Mina","Trump",500, Sweden, Stockholm, Stockholm, nameless, 3
 
-4,Alice","Madison",800
+4,Alice","Madison",800, Sweden, Stockholm, Stockholm, nameless, 4
 
 
 

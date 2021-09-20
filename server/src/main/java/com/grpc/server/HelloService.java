@@ -17,13 +17,18 @@ public class HelloService extends HelloGrpc.HelloImplBase{
     HelloOuterClass.Employee.Builder e2;
     HelloOuterClass.Employee.Builder e3;
     HelloOuterClass.Employee.Builder e4;
-
+    HelloOuterClass.Employee.Address.Builder address;
 
     public HelloService(){
-        e1 = HelloOuterClass.Employee.newBuilder().setId(1).setFirstName("Jack").setLastName("Tim").setSalary(300);
-        e2 = HelloOuterClass.Employee.newBuilder().setId(2).setFirstName("Bob").setLastName("Seif").setSalary(1000);
-        e3 = HelloOuterClass.Employee.newBuilder().setId(3).setFirstName("Mina").setLastName("Trump").setSalary(500);
-        e4 = HelloOuterClass.Employee.newBuilder().setId(4).setFirstName("Alice").setLastName("Madison").setSalary(800);
+        address = HelloOuterClass.Employee.Address.newBuilder().setCity("Stockholm").setState("Stockholm").setCountry("Sweden").setStreet("nameless");
+        e1 = HelloOuterClass.Employee.newBuilder().setId(1).setFirstName("Jack").setLastName("Tim").setSalary(300)
+            .setAddress(address.setHouseNo("1"));
+        e2 = HelloOuterClass.Employee.newBuilder().setId(2).setFirstName("Bob").setLastName("Seif").setSalary(1000)
+                .setAddress(address.setHouseNo("2"));
+        e3 = HelloOuterClass.Employee.newBuilder().setId(3).setFirstName("Mina").setLastName("Trump").setSalary(500)
+                .setAddress(address.setHouseNo("3"));
+        e4 = HelloOuterClass.Employee.newBuilder().setId(4).setFirstName("Alice").setLastName("Madison").setSalary(800)
+                .setAddress(address.setHouseNo("4"));
 
     }
 
