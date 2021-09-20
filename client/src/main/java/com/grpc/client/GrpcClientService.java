@@ -1,8 +1,8 @@
 package com.grpc.client;
 
-import org.springframework.stereotype.Service;
-import com.grpc.common.*;
+import com.grpc.common.HelloGrpc;
 import com.grpc.common.HelloOuterClass;
+import org.springframework.stereotype.Service;
 import io.grpc.Channel;
 import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
 import org.springframework.stereotype.Service;
@@ -16,6 +16,7 @@ public class GrpcClientService {
         HelloGrpc.HelloBlockingStub stub= HelloGrpc.newBlockingStub(serverChannel);
         HelloOuterClass.HelloReply response = stub.sayHello(HelloOuterClass.HelloRequest.newBuilder().setName(name).build());
         return response.getMessage();
+
     }
 
 }
