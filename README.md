@@ -7,22 +7,15 @@ Start Server Application
 
 Start client Application
 
-Open localhost:8082 "Hello World" String is sent to the client
 
 Open localhost:8082/list a list of employees is sent
 
 Each time of execution, the client will print
 the response time in `Duration.between(sendTime, receiveTime).toMillis()`
 
-The first time of execution seems extremely long, which I think can be ignored.
-
-In addition, it might be good to clear the cache each time of execution.
 
 ## Data in .proto
 
-HelloRequest: request with a name, client gives "Michael" by default
-
-HelloReply: server gives "Hello World"
 
 Empty: empty request
 

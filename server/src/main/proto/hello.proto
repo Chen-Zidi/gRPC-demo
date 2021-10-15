@@ -3,7 +3,6 @@ syntax = "proto3";
 option java_package = "com.grpc.common";
 
 service Hello {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
   rpc listEmployees(Empty) returns (EmployeeList){}
 }
 
@@ -31,11 +30,4 @@ message Employee{
   Address address = 6;
 }
 
-// The request message containing the user name.
-message HelloRequest {
-  string name = 1;
-}
-// The response message containing the greetings
-message HelloReply {
-  string message = 1;
-}
+

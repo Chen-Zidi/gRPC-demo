@@ -27,38 +27,6 @@ public final class HelloGrpc {
   public static final String SERVICE_NAME = "Hello";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.grpc.common.HelloOuterClass.HelloRequest,
-      com.grpc.common.HelloOuterClass.HelloReply> getSayHelloMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = com.grpc.common.HelloOuterClass.HelloRequest.class,
-      responseType = com.grpc.common.HelloOuterClass.HelloReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.grpc.common.HelloOuterClass.HelloRequest,
-      com.grpc.common.HelloOuterClass.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<com.grpc.common.HelloOuterClass.HelloRequest, com.grpc.common.HelloOuterClass.HelloReply> getSayHelloMethod;
-    if ((getSayHelloMethod = HelloGrpc.getSayHelloMethod) == null) {
-      synchronized (HelloGrpc.class) {
-        if ((getSayHelloMethod = HelloGrpc.getSayHelloMethod) == null) {
-          HelloGrpc.getSayHelloMethod = getSayHelloMethod = 
-              io.grpc.MethodDescriptor.<com.grpc.common.HelloOuterClass.HelloRequest, com.grpc.common.HelloOuterClass.HelloReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "Hello", "SayHello"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.common.HelloOuterClass.HelloRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.common.HelloOuterClass.HelloReply.getDefaultInstance()))
-                  .setSchemaDescriptor(new HelloMethodDescriptorSupplier("SayHello"))
-                  .build();
-          }
-        }
-     }
-     return getSayHelloMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.grpc.common.HelloOuterClass.Empty,
       com.grpc.common.HelloOuterClass.EmployeeList> getListEmployeesMethod;
 
@@ -120,13 +88,6 @@ public final class HelloGrpc {
 
     /**
      */
-    public void sayHello(com.grpc.common.HelloOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.HelloReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
-    }
-
-    /**
-     */
     public void listEmployees(com.grpc.common.HelloOuterClass.Empty request,
         io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.EmployeeList> responseObserver) {
       asyncUnimplementedUnaryCall(getListEmployeesMethod(), responseObserver);
@@ -134,13 +95,6 @@ public final class HelloGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSayHelloMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.grpc.common.HelloOuterClass.HelloRequest,
-                com.grpc.common.HelloOuterClass.HelloReply>(
-                  this, METHODID_SAY_HELLO)))
           .addMethod(
             getListEmployeesMethod(),
             asyncUnaryCall(
@@ -172,14 +126,6 @@ public final class HelloGrpc {
 
     /**
      */
-    public void sayHello(com.grpc.common.HelloOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.HelloReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void listEmployees(com.grpc.common.HelloOuterClass.Empty request,
         io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.EmployeeList> responseObserver) {
       asyncUnaryCall(
@@ -203,13 +149,6 @@ public final class HelloGrpc {
     protected HelloBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new HelloBlockingStub(channel, callOptions);
-    }
-
-    /**
-     */
-    public com.grpc.common.HelloOuterClass.HelloReply sayHello(com.grpc.common.HelloOuterClass.HelloRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
 
     /**
@@ -240,14 +179,6 @@ public final class HelloGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.grpc.common.HelloOuterClass.HelloReply> sayHello(
-        com.grpc.common.HelloOuterClass.HelloRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.common.HelloOuterClass.EmployeeList> listEmployees(
         com.grpc.common.HelloOuterClass.Empty request) {
       return futureUnaryCall(
@@ -255,8 +186,7 @@ public final class HelloGrpc {
     }
   }
 
-  private static final int METHODID_SAY_HELLO = 0;
-  private static final int METHODID_LIST_EMPLOYEES = 1;
+  private static final int METHODID_LIST_EMPLOYEES = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,10 +205,6 @@ public final class HelloGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((com.grpc.common.HelloOuterClass.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.HelloReply>) responseObserver);
-          break;
         case METHODID_LIST_EMPLOYEES:
           serviceImpl.listEmployees((com.grpc.common.HelloOuterClass.Empty) request,
               (io.grpc.stub.StreamObserver<com.grpc.common.HelloOuterClass.EmployeeList>) responseObserver);
@@ -344,7 +270,6 @@ public final class HelloGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HelloFileDescriptorSupplier())
-              .addMethod(getSayHelloMethod())
               .addMethod(getListEmployeesMethod())
               .build();
         }

@@ -32,14 +32,14 @@ public class HelloService extends HelloGrpc.HelloImplBase{
 
     }
 
-    @Override
-    public void sayHello(HelloOuterClass.HelloRequest request, StreamObserver<HelloOuterClass.HelloReply> responseObserver) {
-        String message = "Hello World!";
-        final HelloOuterClass.HelloReply.Builder replyBuilder = HelloOuterClass.HelloReply.newBuilder().setMessage(message);
-        responseObserver.onNext(replyBuilder.build());
-        responseObserver.onCompleted();
-//        System.out.println("Returning " +message);
-    }
+//    @Override
+//    public void sayHello(HelloOuterClass.HelloRequest request, StreamObserver<HelloOuterClass.HelloReply> responseObserver) {
+//        String message = "Hello World!";
+//        final HelloOuterClass.HelloReply.Builder replyBuilder = HelloOuterClass.HelloReply.newBuilder().setMessage(message);
+//        responseObserver.onNext(replyBuilder.build());
+//        responseObserver.onCompleted();
+////        System.out.println("Returning " +message);
+//    }
 
     @Override
     public void listEmployees(HelloOuterClass.Empty request, StreamObserver<HelloOuterClass.EmployeeList> responseObserver) {
